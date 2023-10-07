@@ -1,0 +1,120 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+        "type": "node",
+        "request": "launch",
+        "name": "AANA CLI",
+        // "program": "${workspaceFolder}/lib/debug.js",
+        "runtimeExecutable": "/Users/mikki/.nvm/versions/node/v18.17.1/bin/node",
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "users", "select", "-rc", "--field", "email", "--value", "mikkimichaelis@gmail.com"],
+
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "cron", "add", "-s", "* * * * *", "-c", "do stuff"],
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "exec", "--function", "playground"],
+        // "runtimeArgs": ["./lib/aana/debug.js", "users", "select", "-rc", "--field", "email", "--json", "betaEmail.json"],
+        // "runtimeArgs": ["./lib/aana/debug.js", "users", "select","-rc", "--field", "email", "--value", "krystal89tracy@gmail.com"],
+        
+
+
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "subscriptions", "count"],
+        // "runtimeArgs": ["./lib/aana/debug.js", "import", "website", "virtual-na"],
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "google", "-q dui lawyers", "-r Missouri"],
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "import", "website", "al-anon", "--headless"],
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "validate", "user", "--uid=apple|000629.9713109cc2fc4f8c85d8f03342ae38a2.0354"],
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "cache", "stats"],
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "marketing", "upload", "--state='New York'", "--city='New York'", "--query='dui lawyer'", "--group='New York, NY - dui lawyer 1'", "--new", "--local"],
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "marketing", "campaign", "-c 'MT - family lawyer 1", "-g 'MT - family lawyer 1'", "-i 311619", "-nab"],
+
+        "runtimeArgs": ["./lib/aana/debug.js", "purchases", "pull", "all"],
+
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "cache5", "stash", "pop"],
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "firebase", "emulate", "start"],
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "cache", "push", "authorization"],
+        // "runtimeArgs": ["./lib/aana/debug.js", "cache", "clear", "all"],
+        // "runtimeArgs": ["./lib/aana/debug.js", "cache", "push", "authUsers"],
+
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "import", "process", "aa-intergroup"],
+        // "runtimeArgs": ["./lib/aana/debug.js", "import", "merge"],
+        // "runtimeArgs": ["./lib/aana/debug.js", "cache", "push", "meetings"],
+        // "runtimeArgs": ["./lib/aana/debug.js", "cache", "refresh", "authorization"],
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "cache", "clear", "state"],
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "cache", "push", "all", "--force"],
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "cache", "pull", "purchases", "--prod", "--limit=10"],
+
+
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "import", "website", "aa-intergroup", "-p"],
+        // "runtimeArgs": ["./lib/aana/debug.js", "cache", "pull", "authUsers", "--prod"],
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "meetings", "add"],
+
+
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "marketing", "google", "-q", "Adult Bookstore", "-c", "San Diego", "-s", "California"],
+        // "runtimeArgs": ["./lib/aana/debug.js", "marketing", "validate", "-q", "Adult Bookstore", "-c", "San Diego", "-s", "California"],
+
+        // "runtimeArgs": ["./lib/aana/debug.js", "marketing", "validate", "-c", "Los Angeles", "-s", "California"],
+        // "runtimeArgs": ["./lib/aana/debug.js", "marketing", "upload", "-g", "Los Angeles 1", "-c", "Los Angeles", "-s", "California"],
+
+        // "preLaunchTask": "npm: build",
+        "sourceMaps": true,
+        "smartStep": true,
+        "internalConsoleOptions": "openOnSessionStart",
+        "console":"internalConsole",
+        "outFiles": [
+            "${workspaceFolder}/lib/**/*.js"
+        ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Playground",
+      "skipFiles": ["<node_internals>/**"],
+      "runtimeExecutable": "node",
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+    //   "args": ["./lib/src/aana.js"],
+    //   "runtimeArgs": ["./lib/src/aana.js", "cache", "refresh", "002179d8-6544-4ccc-99e9-b772e624d87e"],
+    "runtimeArgs": ["./lib/playground.js"],
+    },
+    {
+      "name": "Current TS File",
+      "type": "node",
+      "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"],
+      "request": "launch",
+      "args": ["${relativeFile}"],
+      "runtimeExecutable": "/Users/mikki/.nvm/versions/node/v16.20.1/bin/node",
+      "runtimeArgs": ["-r", "ts-node/register"],
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        "FIREBASE_KEY": "/Users/mikki/Repository/config/meetingmakerapp-service.key.json",
+        "FIREBASE_CONFIG": "/Users/mikki/Repository/config/firebase.config.json",
+        "GCLOUD_PROJECT": "meetingmakerapp",
+        "GOOGLE_APPLICATION_CREDENTIALS": "/Users/mikki/Repository/config/meetingmakerapp-service.key.json",
+
+        // "FIRESTORE_EMULATOR_HOST": "localhost:8080",
+        // "FIREBASE_DATABASE_EMULATOR_HOST": "localhost:8080",
+        // "FIREBASE_AUTH_EMULATOR_HOST": "localhost:9099",
+        // "FIREBASE_FUNCTIONS_EMULATOR_HOST": "localhost:5001", // not sure of env name
+      }
+    }
+  ]
+}
